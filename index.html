@@ -31,7 +31,7 @@
                         <li class='nav-item'><a class='nav-link' href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a> </li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a id="loginbutton">
                         <span class="fa fa-sign-in"></span> Login</a>
                     </span>
                 </div>        
@@ -42,7 +42,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Login </h4>
+                    <h4 class="modal-title text-white">Login </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -75,12 +75,12 @@
     </div>
 
 
-    <div id="reserve" class="modal fade" role="dialog">
+    <div id="reservemodal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Reserve a Table </h4>
+                    <h4 class="modal-title text-white">Reserve a Table </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -176,7 +176,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                            <a role="button" data-toggle="modal" data-target="#reserve" class="btn btn-block nav-link btn-warning">Reserve Table</a>
+                            <button type="button" id="reserve" class="btn btn-block nav-link btn-warning">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -364,6 +364,23 @@
             });
         });
     </script>
+    <script>
+     $("#reserve").click(function(){
+            $('#reservemodal').modal({
+                keyboard: false
+            });
+        });
+    </script>
+    <script>
+    $("#loginbutton").click(function(){
+           $('#loginModal').modal({
+               keyboard: false
+           });
+       });
+   </script>
+
+
+
 </body>
 
 </html>
